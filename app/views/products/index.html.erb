@@ -1,9 +1,11 @@
 <h1>Productos:</h1>
 
 <% @products.each do |product| %>
-  <h2><%= product.title %></h2>
-  <p><%= product.price %>$</p>
-  <%= link_to product_path(product.id) do %>
-    <button type="button">View Product</button>
-  <% end %>
+  <div class='product'>
+    <h2><%= product.title %></h2>
+    <p><%= product.price %>$</p>
+    <%= link_to product_path(product.id) do %>
+      <button type="button">View Product</button>
+    <% end %>
+  </div>
 <% end %>
